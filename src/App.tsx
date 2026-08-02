@@ -21,8 +21,23 @@ interface BookedSpot {
   createdAt: string;
 }
 
+// Check for saved theme preference or system preference
+function getInitialTheme(): 'light' | 'dark' {
+  if (typeof window !== 'undefined') {
+    const saved = localStorage.getItem('dustin_portfolio_theme');
+    if (saved === 'light' || saved === 'dark') {
+      return saved;
+    }
+    // Fall back to system preference
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+  }
+  return 'light';
+}
+
 export default function App() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = useState<'light' | 'dark'>(getInitialTheme);
   
   // Dynamic Tab State
   const [activeTab, setActiveTab] = useState<'overview' | 'strategy' | 'projects' | 'timeline' | 'scheduler'>('overview');
@@ -44,6 +59,15 @@ export default function App() {
   });
 
   const [copyFeedback, setCopyFeedback] = useState<string | null>(null);
+
+  // Sync theme with html element and localStorage on mount
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme]);
 
   // Load booked spots from localStorage on mount
   useEffect(() => {
@@ -169,7 +193,15 @@ export default function App() {
   };
 
   const toggleTheme = () => {
-    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('dustin_portfolio_theme', newTheme);
+    // Apply to html element for better control
+    if (newTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   };
 
   // Generate and download live ICS calendar invite
@@ -225,7 +257,7 @@ export default function App() {
   };
 
   return (
-    <div className={`min-h-screen ${theme} bg-editorial-bg text-editorial-text font-sans antialiased selection:bg-[#FF4E00] selection:text-white relative overflow-hidden transition-colors duration-300`}>
+    <div className="min-h-screen bg-editorial-bg text-editorial-text font-sans antialiased selection:bg-[#FF4E00] selection:text-white relative overflow-hidden transition-colors duration-300">
       
       {/* TOP HEADER & STICKY NAV */}
       <header className="sticky top-0 z-50 bg-editorial-bg/95 backdrop-blur-md border-b border-editorial-border">
