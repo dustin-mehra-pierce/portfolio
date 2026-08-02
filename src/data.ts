@@ -65,7 +65,7 @@ export const CLIENT_PROJECTS = [
   {
     id: "ecoshield-initiative",
     clientName: "Eco Shield Initiative",
-    projectUrl: "https://ecoshieldinitiative.ai.studio/",
+    projectUrl: "https://eco-shield-initiative.com/",
     role: "Founder, Product Designer & Lead Engineer (Solo Creator)",
     description: "Conceived, designed, and engineered a proposed bipartisan initiative to eliminate devastating forest fires in the Western United States. Serving as an interactive overview to present before Congress and the House of Representatives, the platform models a cohesive technological ecosystem—integrating satellite heat mapping, autonomous suppression drone swarms, robotic brush cutters, smart charging and refueling stations, and targeted prescribed burns required for balanced ecosystem health.",
     technologies: ["React", "TypeScript", "D3/Recharts", "Vite", "Tailwind CSS"],
