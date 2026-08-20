@@ -17,7 +17,7 @@ export default function AdditionalWork() {
             Projects Delivered
           </h2>
           <p className="text-editorial-muted text-sm md:text-base italic font-serif max-w-2xl mx-auto">
-            {FEATURED_CASE_STUDY.productName} is one of {totalCount} projects I've delivered end-to-end, from planning through launch.
+            {FEATURED_CASE_STUDY.productName} is one of {totalCount} projects I've delivered or maintained, from planning through launch.
           </p>
         </div>
 
