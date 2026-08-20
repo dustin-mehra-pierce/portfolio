@@ -1,9 +1,9 @@
 import React from 'react';
-import { OTHER_PM_PROJECTS, FEATURED_CASE_STUDY } from '../data';
+import { OTHER_PROJECTS, FEATURED_CASE_STUDY } from '../data';
 import { ExternalLink, Briefcase } from 'lucide-react';
 
 export default function AdditionalWork() {
-  const totalCount = OTHER_PM_PROJECTS.length + 1; // +1 for the featured case study itself
+  const totalCount = OTHER_PROJECTS.length + 1; // +1 for the featured case study itself
 
   return (
     <section className="py-16 md:py-20" id="other-work">
@@ -14,15 +14,15 @@ export default function AdditionalWork() {
             Beyond {FEATURED_CASE_STUDY.productName}
           </span>
           <h2 className="text-2xl md:text-3xl font-bold tracking-tighter uppercase text-editorial-text font-display">
-            More Work as a Technical Product Manager
+            Projects Delivered
           </h2>
           <p className="text-editorial-muted text-sm md:text-base italic font-serif max-w-2xl mx-auto">
-            {FEATURED_CASE_STUDY.productName} is one of {totalCount} products I've led as a Technical Product Manager.
+            {FEATURED_CASE_STUDY.productName} is one of {totalCount} projects I've delivered end-to-end, from planning through launch.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {OTHER_PM_PROJECTS.map((p) => (
+          {OTHER_PROJECTS.map((p) => (
             <div key={p.id} className="bg-editorial-card border border-editorial-border p-5 md:p-6 space-y-3 hover:border-[#FF4E00]/40 transition-all group">
               <div className="flex items-start justify-between gap-3">
                 <div>
@@ -63,7 +63,7 @@ export default function AdditionalWork() {
 
         <div className="flex items-center justify-center gap-2 text-[10px] text-editorial-muted/70 font-mono uppercase tracking-widest pt-2">
           <Briefcase className="w-3.5 h-3.5 text-[#FF4E00]" />
-          {totalCount} Products &bull; Technical Product Manager
+          {totalCount} Projects Delivered
         </div>
 
       </div>

@@ -30,7 +30,7 @@ export interface FeaturedCaseStudy {
   indexingNote: string;
 }
 
-export interface PMProject {
+export interface Project {
   id: string;
   name: string;
   role: string;

@@ -1,4 +1,4 @@
-import { FeaturedCaseStudy, PMProject } from './types';
+import { FeaturedCaseStudy, Project } from './types';
 
 export const PERSONAL_INFO = {
   name: "Dustin Pierce",
@@ -19,7 +19,7 @@ export const FEATURED_CASE_STUDY: FeaturedCaseStudy = {
   projectUrl: "https://statdiagnosis.ai.studio/",
   stage: "Alpha / Beta",
   stageNote: "Live and actively iterating. Core flows work end-to-end, and the platform is currently being hardened for cost, performance, and a broader public rollout.",
-  role: "Co-Founder, Product Designer & Lead Engineer",
+  role: "Founder, Product Designer & Lead Engineer",
   timeframe: "2024 – Present",
   techStack: ["React", "TypeScript", "Tailwind CSS", "Gemini API", "Vite"],
   problem:
@@ -27,11 +27,11 @@ export const FEATURED_CASE_STUDY: FeaturedCaseStudy = {
   process: [
     {
       label: "1. Define the problem & scope an MVP",
-      detail: "Worked with co-founders to define the core diagnostic workflow, decide what belonged in a v1, and cut everything else to ship a focused alpha quickly."
+      detail: "Defined the core diagnostic workflow, decided what belonged in a v1, and cut everything else to ship a focused alpha quickly."
     },
     {
       label: "2. Architect for low cost & fast iteration",
-      detail: "Chose a React/TypeScript/Vite front end with a thin server layer calling the Gemini API, prioritizing a lean, cheap-to-run stack over a heavier backend so we could iterate daily without burning budget."
+      detail: "Chose a React/TypeScript/Vite front end with a thin server layer calling the Gemini API, prioritizing a lean, cheap-to-run stack over a heavier backend to iterate daily without burning budget."
     },
     {
       label: "3. Build the core diagnostic & analytics flows",
@@ -47,28 +47,28 @@ export const FEATURED_CASE_STUDY: FeaturedCaseStudy = {
     }
   ],
   results: [
-    { value: "1.78k", description: "Unique visitors in the last 30 days" },
-    { value: "31.81k", description: "Total requests processed in the last 30 days" },
-    { value: "1.5k", description: "Unique users acquired within the first 21 days of launch" }
+    { value: "2.04k", description: "Unique visitors in the last 30 days" },
+    { value: "20.79k", description: "Total requests processed in the last 30 days" },
+    { value: "9,953", description: "SSL requests served all time" }
   ],
   indexingNote:
     "A meaningful share of this traffic is search-engine bots and crawlers rather than human visitors, which is expected at this stage. It reflects a well-indexed SEO structure, sitemap, and semantic markup, laying the groundwork for scaling human traffic ahead of a wider public launch."
 };
 
-// Additional products led as Technical Product Manager / product-lead.
-export const OTHER_PM_PROJECTS: PMProject[] = [
+// Additional projects delivered end-to-end, from planning through launch.
+export const OTHER_PROJECTS: Project[] = [
   {
     id: "ecoshield-initiative",
     name: "Eco Shield Initiative",
     role: "Founder, Product Designer & Lead Engineer",
     blurb: "A bipartisan wildfire-mitigation concept platform modeling satellite heat mapping, suppression drone swarms, and prescribed-burn scheduling, built as an interactive overview for policy stakeholders.",
-    projectUrl: "https://eco-shield-initiative.com/",
+    projectUrl: "https://ecoshieldinitiative.ai.studio/",
     techStack: ["React", "TypeScript", "Recharts", "Vite"]
   },
   {
     id: "new-leaf-sobriety",
     name: "New Leaf Sobriety",
-    role: "Technical Product Manager & Full Stack Engineer",
+    role: "Full Stack Engineer",
     blurb: "A digital wellness and progress-tracking platform for a Level 2 NARR sober living home, covering onboarding, recovery milestones, and dynamic client timelines.",
     projectUrl: "https://newleafsobriety.com/",
     techStack: ["React", "Django", "PostgreSQL", "AWS"]
@@ -76,7 +76,7 @@ export const OTHER_PM_PROJECTS: PMProject[] = [
   {
     id: "tech-powered-websites",
     name: "Tech Powered Websites",
-    role: "Technical Product Manager & Full Stack Engineer",
+    role: "Full Stack Engineer",
     blurb: "A modular website-building product letting clients rapidly deploy custom sites, with AI-driven SEO and accessibility checks built into the roadmap.",
     projectUrl: "https://techpoweredwebsites.com/",
     techStack: ["React", "Tailwind CSS", "Cloudflare"]
@@ -84,8 +84,8 @@ export const OTHER_PM_PROJECTS: PMProject[] = [
   {
     id: "government-sector",
     name: "Government Sector Applications",
-    role: "Technical Product Manager & Full Stack Engineer",
-    blurb: "2.5 years leading planning, development, and delivery of secure government software, with backlogs structured around strict compliance and RBAC requirements.",
+    role: "Full Stack Engineer",
+    blurb: "2.5 years delivering secure government software, with backlogs structured around strict compliance and RBAC requirements.",
     projectUrl: "",
     techStack: ["Angular", "Django", "Docker", "PostgreSQL"]
   },
@@ -96,5 +96,29 @@ export const OTHER_PM_PROJECTS: PMProject[] = [
     blurb: "Technical lead for the public-facing site and ordering platform, directing high-traffic campaigns including the company's largest revenue day to date.",
     projectUrl: "https://www.texasroadhouse.com/",
     techStack: ["Angular", "Ionic", "AWS"]
+  },
+  {
+    id: "peets-coffee",
+    name: "Peet's Coffee",
+    role: "Frontend Web Developer",
+    blurb: "Built and refactored mobile checkout interfaces and customer loyalty portals to eliminate network lag and lock-ups during peak traffic.",
+    projectUrl: "https://www.peets.com/",
+    techStack: ["Angular", "Ionic", "CSS", "HTML"]
+  },
+  {
+    id: "bubbas-33",
+    name: "Bubba's 33",
+    role: "Frontend Web Developer",
+    blurb: "Built and maintained responsive customer portal views and menu configurations for a high-traffic restaurant ordering platform.",
+    projectUrl: "https://www.bubbas33.com/",
+    techStack: ["Angular", "Ionic", "CSS", "HTML"]
+  },
+  {
+    id: "boston-market",
+    name: "Boston Market",
+    role: "Frontend Web Developer",
+    blurb: "Delivered digital menu displays and order validation services, including reusable components for mobile-responsive storefront ordering.",
+    projectUrl: "https://www.bostonmarket.com/",
+    techStack: ["Angular", "Ionic", "CSS", "HTML"]
   }
 ];
