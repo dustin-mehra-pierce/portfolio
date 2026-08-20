@@ -20,7 +20,7 @@ export const FEATURED_CASE_STUDY: FeaturedCaseStudy = {
   stage: "Alpha / Beta",
   stageNote: "Live and actively iterating. Core flows work end-to-end, and the platform is currently being hardened for cost, performance, and a broader public rollout.",
   role: "Founder, Product Designer & Lead Engineer",
-  timeframe: "2024 – Present",
+  timeframe: "2025 – Present",
   techStack: ["React", "TypeScript", "Tailwind CSS", "Gemini API", "Vite"],
   problem:
     "Clinicians and students needed a fast way to reason through statistical and diagnostic scenarios without expensive, clunky enterprise tooling. Existing options were either too generic (spreadsheets) or too heavyweight (full EHR-integrated platforms), leaving a gap for a lightweight, AI-assisted diagnostic and analytics companion.",
@@ -49,7 +49,7 @@ export const FEATURED_CASE_STUDY: FeaturedCaseStudy = {
   results: [
     { value: "2.04k", description: "Unique visitors in the last 30 days" },
     { value: "20.79k", description: "Total requests processed in the last 30 days" },
-    { value: "9,953", description: "SSL requests served all time" }
+    { value: "9,953", description: "SSL requests serveds" }
   ],
   indexingNote:
     "A meaningful share of this traffic is search-engine bots and crawlers rather than human visitors, which is expected at this stage. It reflects a well-indexed SEO structure, sitemap, and semantic markup, laying the groundwork for scaling human traffic ahead of a wider public launch."
