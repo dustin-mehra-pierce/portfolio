@@ -1,50 +1,41 @@
-export interface CaseStudy {
-  id: string;
+export interface PersonalInfo {
+  name: string;
+  location: string;
+  email: string;
+  linkedin: string;
+}
+
+export interface ProcessStep {
+  label: string;
+  detail: string;
+}
+
+export interface ResultMetric {
+  value: string;
+  description: string;
+}
+
+export interface FeaturedCaseStudy {
   productName: string;
-  domain: string;
-  challenge: string;
-  roleAndTradeoffs: string;
-  metricsAndOutcomes: {
-    label: string;
-    value: string;
-    description: string;
-  }[];
+  tagline: string;
+  projectUrl: string;
+  stage: string;
+  stageNote: string;
+  role: string;
+  timeframe: string;
+  techStack: string[];
+  problem: string;
+  process: ProcessStep[];
+  results: ResultMetric[];
+  indexingNote: string;
 }
 
-export interface PRDSection {
-  title: string;
-  content: string;
-}
-
-export interface Diagnosis {
+export interface Project {
   id: string;
   name: string;
-  probability: number; // percentage
-  criticality: 'CRITICAL' | 'HIGH' | 'MODERATE' | 'LOW';
-  redFlag: boolean;
-  rationale: string;
-  keyTriad: string;
-  requiredNegativeFindings: string[]; // findings that, if present as negative, will exclude/reduce this diagnosis
-}
-
-export interface ClinicalCase {
-  id: string;
-  title: string;
-  presentation: string;
-  vitals: {
-    temp: string;
-    hr: string;
-    bp: string;
-    spo2: string;
-  };
-  diagnoses: Diagnosis[];
-}
-
-export interface TimelineEvent {
-  year: string;
   role: string;
-  company: string;
-  description: string;
-  highlights: string[];
-  type: 'pm' | 'engineering' | 'lead';
+  blurb: string;
+  projectUrl: string;
+  techStack: string[];
 }
+
